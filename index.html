@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce Dango</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="text-primary">
+    <header class="flex bg-white flex-col text-center">
+      <span class="w-full bg-primary text-white text-center"
+        >30% Off All Orders Until 4/27</span
+      >
+      <nav id="mainNav" class="p-5 min-h-[4rem] uppercase relative">
+        <div class="md:hidden absolute left-5 top-1/2 z-50 -translate-y-1/2">
+          <!-- Menú hamburguesa -->
+          <button id="menuBtn" class="text-black">
+            <svg
+              width="25"
+              height="13"
+              viewBox="0 0 25 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line y1="0.5" x2="25" y2="0.5" stroke="black" />
+              <line y1="6.5" x2="25" y2="6.5" stroke="black" />
+              <line y1="12.5" x2="25" y2="12.5" stroke="black" />
+            </svg>
+          </button>
+        </div>
+        <ul id="menuItems" class="fixed md:static -translate-x-full md:translate-x-0 transition bg-white inset-0 z-10 flex flex-col md:flex-row gap-5 items-center justify-center md:flex justify-center md:space-x-5">
+          <li>
+            <a
+              href="#"
+              class="font-bold text-primary relative after:absolute after:h-1 after:w-full after:-bottom-1 after:right-0 after:bg-[var(--color-primary)]"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-primary relative after:absolute after:h-1 after:w-0 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full after:-bottom-1 after:left-0 after:bg-[var(--color-primary)]"
+              >Item 1</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-primary relative after:absolute after:h-1 after:w-0 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full after:-bottom-1 after:left-0 after:bg-[var(--color-primary)]"
+              >Item 2</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-primary relative after:absolute after:h-1 after:w-0 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full after:-bottom-1 after:left-0 after:bg-[var(--color-primary)]"
+              >Item 3</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-primary relative after:absolute after:h-1 after:w-0 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full after:-bottom-1 after:left-0 after:bg-[var(--color-primary)]"
+              >Item 4</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-primary relative after:absolute after:h-1 after:w-0 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full after:-bottom-1 after:left-0 after:bg-[var(--color-primary)]"
+              >Item 5</a
+            >
+          </li>
+        </ul>
+        <button
+          id="cart-btn"
+          class="absolute z-50 text-black top-1/2 right-10 -translate-y-1/2 hover:scale-110 transition cursor-pointer"
+        >
+          <svg
+            width="14"
+            height="19"
+            viewBox="0 0 14 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.1495 4.31124H10.5406C10.5406 2.41272 9.1005 0.875 7.32257 0.875C5.54463 0.875 4.10458 2.41272 4.10458 4.31124H2.49559C1.61064 4.31124 0.886597 5.0844 0.886597 6.02937V16.3381C0.886597 17.2831 1.61064 18.0562 2.49559 18.0562H12.1495C13.0345 18.0562 13.7585 17.2831 13.7585 16.3381V6.02937C13.7585 5.0844 13.0345 4.31124 12.1495 4.31124ZM7.32257 2.59312C8.20751 2.59312 8.93156 3.36628 8.93156 4.31124H5.71358C5.71358 3.36628 6.43762 2.59312 7.32257 2.59312ZM12.1495 16.3381H2.49559V6.02937H4.10458V7.74749C4.10458 8.21997 4.46661 8.60655 4.90908 8.60655C5.35155 8.60655 5.71358 8.21997 5.71358 7.74749V6.02937H8.93156V7.74749C8.93156 8.21997 9.29358 8.60655 9.73606 8.60655C10.1785 8.60655 10.5406 8.21997 10.5406 7.74749V6.02937H12.1495V16.3381Z"
+              fill="#3A2676"
+            />
+          </svg>
+          <svg
+            class="absolute -bottom-0.5 -right-1"
+            width="11"
+            height="10"
+            viewBox="0 0 11 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <ellipse
+              cx="5.57525"
+              cy="5"
+              rx="3.97516"
+              ry="4"
+              fill="#7AA65A"
+              stroke="#3A2676"
+              stroke-width="1.5"
+            />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Modal -->
+    <div
+      id="cart-modal"
+      class="z-20 hidden fixed inset-0 bg-black p-5 bg-opacity-25 flex justify-center items-center"
+    >
+      <div class="bg-white w-full max-w-xl p-4 rounded space-y-4">
+        <h2 class="text-lg font-bold">Tu Carrito</h2>
+        <div id="cart-items" class="flex flex-col space-y-2">
+          <!-- Items del carro -->
+        </div>
+        <div class="text-center">Total: <span id="cart-total">$0</span></div>
+        <button
+          id="close-cart"
+          class="hover:bg-red-600 transition bg-red-500 text-white p-2 rounded"
+        >
+          Cerrar
+        </button>
+      </div>
+    </div>
+
+    <!-- Main -->
+    <main>
+      <div class="relative">
+        <div
+          class="bg-[url('./assets/hero01.png')] bg-center relative h-[85svh] flex items-center justify-center"
+        >
+          <div class="absolute inset-0 bg-white/70"></div>
+          <div
+            class="relative grid lg:grid-cols-2 grid-cols-1 gap-5 md:gap-20 h-full p-5 md:p-20 w-full"
+          >
+            <div class="flex flex-col justify-center gap-5 order-1 md:order-0 relative">
+              <div class="swiper w-full swiper-container-1">
+                <div class="inset-0 absolute w-full h-full bg-transparent z-10"></div>
+
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <h2 class="text-4xl md:text-4xl md:text-6xl mb-2">
+                      Lorem ipsum <span class="block"> dolor sit amet</span>
+                    </h2>
+                    <p class="text-xl hidden md:block">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Laborum expedita culpa explicabo sunt qui debitis hic,
+                      ullam neque, molestias eos.
+                    </p>
+                  </div>
+                  <div class="swiper-slide">
+                    <h2 class="text-4xl md:text-6xl mb-2">
+                      Laborum expedita
+                      <span class="block">culpa explicabo sunt</span>
+                    </h2>
+                    <p class="text-xl hidden md:block">
+                      Cupiditate alias necessitatibus quaerat voluptas officia.
+                      Praesentium expedita voluptatibus nulla.
+                    </p>
+                  </div>
+                  <div class="swiper-slide">
+                    <h2 class="text-4xl md:text-6xl mb-2">
+                      Maiores nisi at
+                      <span class="block">beatae quibusdam</span>
+                    </h2>
+                    <p class="text-xl hidden md:block">
+                      Doloribus nemo nam qui rem suscipit. Quisquam, quod
+                      voluptates. Quisquam, quod voluptates.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col gap-5 items-center md:items-start mt-4 md:mt-0"
+              >
+                <div class="flex flex-col md:flex-row gap-5 w-11/12">
+                  <button
+                    class="flex w-2/3 mx-auto gap-12 transition uppercase font-bold group items-center bg-primary text-white py-5 flex-1 px-10 text-left rounded-lg"
+                  >
+                    Shop Now
+                    <svg
+                      class="transition transform group-hover:translate-x-3"
+                      width="8"
+                      height="15"
+                      viewBox="0 0 8 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 1.3281L1.22022 0L8 7.42836L1.21337 14.8567L0 13.5286L5.57326 7.42836L0 1.3281Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="flex justify-center md:justify-start uppercase text-black md:text-[var(--color-primary)] gap-12 group items-center md:border border-primary py-5 flex-1 px-10 text-center md:text-left rounded-lg"
+                  >
+                    Take The Quiz
+                    <svg
+                      class="transition hidden md:block transform group-hover:translate-x-3"
+                      width="8"
+                      height="15"
+                      viewBox="0 0 8 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 1.3281L1.22022 0L8 7.42836L1.21337 14.8567L0 13.5286L5.57326 7.42836L0 1.3281Z"
+                        fill="var(--color-primary)"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="flex gap-2">
+                  <button
+                    id="prev_hero_slide"
+                    class="bg-transparent border group border-primary rotate-180 hover:bg-[var(--color-primary)] transition w-fit px-5 py-2.5 rounded-full"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      class=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        class="group-hover:fill-white transition"
+                        d="M0 7H12.17L6.58 1.41L8 0L16 8L8 16L6.59 14.59L12.17 9H0V7Z"
+                        fill="var(--color-primary)"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    id="next_hero_slide"
+                    class="bg-transparent border group border-primary hover:bg-[var(--color-primary)] transition w-fit px-5 py-2.5 rounded-full"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        class="group-hover:fill-white transition"
+                        d="M0 7H12.17L6.58 1.41L8 0L16 8L8 16L6.59 14.59L12.17 9H0V7Z"
+                        fill="var(--color-primary)"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper w-full swiper-container-2 order-0 lg:order-1">
+              <div class="inset-0 absolute w-full h-full bg-transparent z-10"></div>
+
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="/assets/FotoHero.png"
+                    class="w-full md:w-1/2 lg:w-2/3 h-full rounded-xl mx-auto object-cover"
+                    alt="Mujer"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="/assets/product02.png"
+                    class="w-full md:w-1/2 lg:w-2/3 h-full rounded-xl mx-auto object-cover"
+                    alt="Mujer"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="/assets/product01.png"
+                    class="w-full md:w-1/2 lg:w-2/3 h-full rounded-xl mx-auto object-cover"
+                    alt="Mujer"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="text-center text-primary opacity-50 text-4xl mt-10 font-bold">
+        Featured Collection
+      </h2>
+      <!-- Swiper -->
+      <div class="swiper myProductSwiper px-10 py-5 max-w-screen-lg">
+        <div class="swiper-wrapper">
+          <!-- Los slides se agregarán aquí desde app.js -->
+        </div>
+        <div class="flex justify-center gap-2 mt-10">
+          <button
+            id="prev_page"
+            class="bg-transparent disabled:opacity-40 border group border-primary rotate-180 hover:bg-[var(--color-primary)] transition w-fit px-5 py-2.5 rounded-full"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="group-hover:fill-white transition"
+                d="M0 7H12.17L6.58 1.41L8 0L16 8L8 16L6.59 14.59L12.17 9H0V7Z"
+                fill="var(--color-primary)"
+              />
+            </svg>
+          </button>
+          <button
+            id="next_page"
+            class="bg-transparent disabled:opacity-40 group border group border-primary hover:bg-[var(--color-primary)] transition w-fit px-5 py-2.5 rounded-full"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="group-hover:fill-white transition"
+                d="M0 7H12.17L6.58 1.41L8 0L16 8L8 16L6.59 14.59L12.17 9H0V7Z"
+                fill="var(--color-primary)"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- App script -->
+    <script src="app.js"></script>
+  </body>
+</html>
