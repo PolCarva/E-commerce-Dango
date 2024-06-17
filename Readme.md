@@ -66,3 +66,8 @@ ecommerce-dango/
 - Los productos pueden ser añadidos al carrito haciendo clic en el botón "Buy Now".
 - El contenido del carrito se almacena en `localStorage` y se muestra en un modal.
 - Los productos pueden ser eliminados del carrito mediante el botón "Remove".
+
+### Despliegue
+
+El proyecto está desplegado en Vercel y se puede acceder a través del siguiente enlace: [E-commerce Dango](https://e-commerce-dango.vercel.app/)
+
