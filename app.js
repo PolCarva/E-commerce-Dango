@@ -18,36 +18,12 @@ const items = [
 
 document.addEventListener("DOMContentLoaded", function () {
   // Inicializar Swiper para Texto
-  const textSwiper = new Swiper(".swiper-container-1", {
-    // Optional parameters
-    direction: "horizontal",
+  var heroSwiper = new Swiper('.hero-swiper', {
+    autoplay: true,
     loop: true,
-    speed: 1000,
-    autoplay: {
-      delay: 5000,
-    },
-
-    // Navigation arrows
     navigation: {
-      nextEl: "#next_hero_slide",
-      prevEl: "#prev_hero_slide",
-    },
-  });
-
-  // Inicializar Swiper para Imágenes
-  const imgSlider = new Swiper(".swiper-container-2", {
-    // Optional parameters
-    direction: "horizontal",
-    loop: true,
-    effect: "fade",
-    speed: 1000,
-    autoplay: {
-      delay: 5000,
-    },
-    // Navigation arrows
-    navigation: {
-      nextEl: "#next_hero_slide",
-      prevEl: "#prev_hero_slide",
+      nextEl: '#next_hero_slide',
+      prevEl: '#prev_hero_slide',
     },
   });
 
@@ -55,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const productSwiperEl = document.querySelector(".myProductSwiper");
   const productSwiper = new Swiper(productSwiperEl, {
     spaceBetween: 30,
-    slidesPerView: 2,
+    slidesPerView: 1.9,
     slidesPerGroup: 8,
     grid: {
       rows: 4,
@@ -71,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     breakpoints: {
       768: {
-        slidesPerView: 4,
+        slidesPerView: 3.9,
         slidesPerGroup: 8,
         grid: {
           rows: 2,
@@ -84,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
   items.forEach((item) => {
     const slide = document.createElement("div");
     slide.className =
-      "swiper-slide !mt-2 md:!mt-8 p-3 shadow-xl w-fit rounded-xl flex flex-col items-center justify-center gap-2";
+      "swiper-slide !mt-2 md:!mt-8 p-3 shadow-lg w-fit rounded-xl flex flex-col items-center justify-center gap-2";
     slide.dataset.name = item.name;
     slide.dataset.price = item.price;
     slide.innerHTML = `
@@ -140,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
         cartItems.appendChild(itemElement);
       });
     }
+    updateCartTotal();
   }
 
   // Función para añadir productos al carrito
@@ -157,6 +134,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       displayCart();
+      cartModal.classList.remove("hidden");
+
       saveCart();
     });
   });

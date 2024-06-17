@@ -38,7 +38,10 @@
             </svg>
           </button>
         </div>
-        <ul id="menuItems" class="fixed md:static -translate-x-full md:translate-x-0 transition bg-white inset-0 z-10 flex flex-col md:flex-row gap-5 items-center justify-center md:flex justify-center md:space-x-5">
+        <ul
+          id="menuItems"
+          class="fixed md:static -translate-x-full md:translate-x-0 transition bg-white inset-0 z-10 flex flex-col md:flex-row gap-5 items-center justify-center md:flex justify-center md:space-x-5"
+        >
           <li>
             <a
               href="#"
@@ -143,161 +146,239 @@
     <!-- Main -->
     <main>
       <div class="relative">
-        <div
-          class="bg-[url('./assets/hero01.png')] bg-center relative h-[85svh] flex items-center justify-center"
-        >
-          <div class="absolute inset-0 bg-white/70"></div>
-          <div
-            class="relative grid lg:grid-cols-2 grid-cols-1 gap-5 md:gap-20 h-full p-5 md:p-20 w-full"
-          >
-            <div class="flex flex-col justify-center gap-5 order-1 md:order-0 relative">
-              <div class="swiper w-full swiper-container-1">
-                <div class="inset-0 absolute w-full h-full bg-transparent z-10"></div>
-
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <h2 class="text-4xl md:text-4xl md:text-6xl mb-2">
-                      Lorem ipsum <span class="block"> dolor sit amet</span>
-                    </h2>
-                    <p class="text-xl hidden md:block">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Laborum expedita culpa explicabo sunt qui debitis hic,
-                      ullam neque, molestias eos.
-                    </p>
-                  </div>
-                  <div class="swiper-slide">
-                    <h2 class="text-4xl md:text-6xl mb-2">
-                      Laborum expedita
-                      <span class="block">culpa explicabo sunt</span>
-                    </h2>
-                    <p class="text-xl hidden md:block">
-                      Cupiditate alias necessitatibus quaerat voluptas officia.
-                      Praesentium expedita voluptatibus nulla.
-                    </p>
-                  </div>
-                  <div class="swiper-slide">
-                    <h2 class="text-4xl md:text-6xl mb-2">
-                      Maiores nisi at
-                      <span class="block">beatae quibusdam</span>
-                    </h2>
-                    <p class="text-xl hidden md:block">
-                      Doloribus nemo nam qui rem suscipit. Quisquam, quod
-                      voluptates. Quisquam, quod voluptates.
-                    </p>
-                  </div>
-                </div>
-              </div>
+        <div class="swiper hero-swiper h-[85svh]">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div
+              class="swiper-slide relative bg-[url('./assets/hero01.png')] bg-center bg-cover flex items-center justify-center"
+            >
+              <div class="absolute inset-0 bg-white/70"></div>
               <div
-                class="flex flex-col gap-5 items-center md:items-start mt-4 md:mt-0"
+                class="relative grid lg:grid-cols-2 grid-cols-1 gap-5 md:gap-20 h-full p-5 md:p-20 w-full"
               >
-                <div class="flex flex-col md:flex-row gap-5 w-11/12">
-                  <button
-                    class="flex w-2/3 mx-auto gap-12 transition uppercase font-bold group items-center bg-primary text-white py-5 flex-1 px-10 text-left rounded-lg"
+                <div class="flex flex-col justify-center gap-5">
+                  <h2 class="text-4xl md:text-6xl mb-2">
+                    Lorem ipsum <span class="block"> dolor sit amet</span>
+                  </h2>
+                  <p class="text-xl hidden md:block">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laborum expedita culpa explicabo sunt qui debitis hic, ullam
+                    neque, molestias eos.
+                  </p>
+                  <div
+                    class="flex flex-col gap-5 items-center md:items-start mt-4 md:mt-0"
                   >
-                    Shop Now
-                    <svg
-                      class="transition transform group-hover:translate-x-3"
-                      width="8"
-                      height="15"
-                      viewBox="0 0 8 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0 1.3281L1.22022 0L8 7.42836L1.21337 14.8567L0 13.5286L5.57326 7.42836L0 1.3281Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </button>
-                  <button
-                    class="flex justify-center md:justify-start uppercase text-black md:text-[var(--color-primary)] gap-12 group items-center md:border border-primary py-5 flex-1 px-10 text-center md:text-left rounded-lg"
-                  >
-                    Take The Quiz
-                    <svg
-                      class="transition hidden md:block transform group-hover:translate-x-3"
-                      width="8"
-                      height="15"
-                      viewBox="0 0 8 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0 1.3281L1.22022 0L8 7.42836L1.21337 14.8567L0 13.5286L5.57326 7.42836L0 1.3281Z"
-                        fill="var(--color-primary)"
-                      />
-                    </svg>
-                  </button>
+                    <div class="flex flex-col md:flex-row gap-5 w-11/12">
+                      <button
+                        class="flex w-2/3 mx-auto gap-12 transition uppercase font-bold group items-center bg-primary text-white py-5 flex-1 px-10 text-left rounded-lg"
+                      >
+                        Shop Now
+                        <svg
+                          class="transition transform group-hover:translate-x-3"
+                          width="8"
+                          height="15"
+                          viewBox="0 0 8 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 1.3281L1.22022 0L8 7.42836L1.21337 14.8567L0 13.5286L5.57326 7.42836L0 1.3281Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        class="flex justify-center md:justify-start uppercase font-bold md:font-regular text-black md:text-[var(--color-primary)] gap-12 group items-center md:border border-primary py-5 flex-1 px-10 text-center md:text-left rounded-lg"
+                      >
+                        Take The Quiz
+                        <svg
+                          class="transition hidden md:block transform group-hover:translate-x-3"
+                          width="8"
+                          height="15"
+                          viewBox="0 0 8 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 1.3281L1.22022 0L8 7.42836L1.21337 14.8567L0 13.5286L5.57326 7.42836L0 1.3281Z"
+                            fill="var(--color-primary)"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                <div class="flex gap-2">
-                  <button
-                    id="prev_hero_slide"
-                    class="bg-transparent border group border-primary rotate-180 hover:bg-[var(--color-primary)] transition w-fit px-5 py-2.5 rounded-full"
-                  >
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      class=""
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        class="group-hover:fill-white transition"
-                        d="M0 7H12.17L6.58 1.41L8 0L16 8L8 16L6.59 14.59L12.17 9H0V7Z"
-                        fill="var(--color-primary)"
-                      />
-                    </svg>
-                  </button>
-                  <button
-                    id="next_hero_slide"
-                    class="bg-transparent border group border-primary hover:bg-[var(--color-primary)] transition w-fit px-5 py-2.5 rounded-full"
-                  >
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        class="group-hover:fill-white transition"
-                        d="M0 7H12.17L6.58 1.41L8 0L16 8L8 16L6.59 14.59L12.17 9H0V7Z"
-                        fill="var(--color-primary)"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper w-full swiper-container-2 order-0 lg:order-1">
-              <div class="inset-0 absolute w-full h-full bg-transparent z-10"></div>
-
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
+                <div class="flex justify-center items-center">
                   <img
                     src="/assets/FotoHero.png"
                     class="w-full md:w-1/2 lg:w-2/3 h-full rounded-xl mx-auto object-cover"
                     alt="Mujer"
                   />
                 </div>
-                <div class="swiper-slide">
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div
+              class="swiper-slide relative bg-[url('./assets/hero02.jpg')] bg-center bg-cover flex items-center justify-center"
+            >
+              <div class="absolute inset-0 bg-white/80"></div>
+              <div
+                class="relative grid lg:grid-cols-2 grid-cols-1 gap-5 md:gap-20 h-full p-5 md:p-20 w-full"
+              >
+                <div class="flex flex-col justify-center gap-5">
+                  <h2 class="text-4xl md:text-6xl mb-2">
+                    Laborum expedita<span class="block">
+                      culpa explicabo sunt</span
+                    >
+                  </h2>
+                  <p class="text-xl hidden md:block">
+                    Cupiditate alias necessitatibus quaerat voluptas officia.
+                    Praesentium expedita voluptatibus nulla.
+                  </p>
+                  <div
+                    class="flex flex-col gap-5 items-center md:items-start mt-4 md:mt-0"
+                  >
+                    <div class="flex flex-col md:flex-row gap-5 w-11/12">
+                      <button
+                        class="flex w-2/3 mx-auto md:mx-0 md:w-1/2 gap-12 transition uppercase font-bold group items-center bg-primary text-white py-5 px-10 text-left rounded-lg"
+                      >
+                        Shop Now
+                        <svg
+                          class="transition transform group-hover:translate-x-3"
+                          width="8"
+                          height="15"
+                          viewBox="0 0 8 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 1.3281L1.22022 0L8 7.42836L1.21337 14.8567L0 13.5286L5.57326 7.42836L0 1.3281Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </button>
+                     
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-center items-center">
                   <img
                     src="/assets/product02.png"
-                    class="w-full md:w-1/2 lg:w-2/3 h-full rounded-xl mx-auto object-cover"
+                    class="w-full md:w-1/2 lg:w-2/3 md:h-full self-end aspect-square rounded-xl mx-auto object-cover"
                     alt="Mujer"
                   />
                 </div>
-                <div class="swiper-slide">
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div
+              class="swiper-slide relative bg-[url('./assets/hero03.jpg')] bg-center bg-cover flex items-center justify-center"
+            >
+              <div class="absolute inset-0 bg-white/70"></div>
+              <div
+                class="relative grid lg:grid-cols-2 grid-cols-1 gap-5 md:gap-20 h-full p-5 md:p-20 w-full"
+              >
+                <div class="flex flex-col justify-center gap-5">
+                  <h2 class="text-4xl md:text-6xl mb-2">
+                    Maiores nisi at<span class="block"> beatae quibusdam</span>
+                  </h2>
+                  <p class="text-xl hidden md:block">
+                    Doloribus nemo nam qui rem suscipit. Quisquam, quod
+                    voluptates. Quisquam, quod voluptates.
+                  </p>
+                  <div
+                    class="flex flex-col gap-5 items-center md:items-start mt-4 md:mt-0"
+                  >
+                    <div class="flex flex-col md:flex-row gap-5 w-11/12">
+                      <button
+                        class="flex w-2/3 mx-auto gap-12 transition uppercase font-bold group items-center bg-primary text-white py-5 flex-1 px-10 text-left rounded-lg"
+                      >
+                        Shop Now
+                        <svg
+                          class="transition transform group-hover:translate-x-3"
+                          width="8"
+                          height="15"
+                          viewBox="0 0 8 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 1.3281L1.22022 0L8 7.42836L1.21337 14.8567L0 13.5286L5.57326 7.42836L0 1.3281Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        class="flex justify-center md:justify-start uppercase font-bold text-black md:text-[var(--color-primary)] gap-12 group items-center md:border border-primary py-5 flex-1 px-10 text-center md:text-left rounded-lg"
+                      >
+                        Take The Quiz
+                        <svg
+                          class="transition hidden md:block transform group-hover:translate-x-3"
+                          width="8"
+                          height="15"
+                          viewBox="0 0 8 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 1.3281L1.22022 0L8 7.42836L1.21337 14.8567L0 13.5286L5.57326 7.42836L0 1.3281Z"
+                            fill="var(--color-primary)"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-center items-center">
                   <img
                     src="/assets/product01.png"
-                    class="w-full md:w-1/2 lg:w-2/3 h-full rounded-xl mx-auto object-cover"
+                    class="w-full md:w-1/2 lg:w-2/3 h-full  aspect-square rounded-xl mx-auto object-cover"
                     alt="Mujer"
                   />
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <!-- Navigation buttons -->
+        <div class="flex gap-2 relative w-fit mx-auto mt-2 md:absolute md:bottom-20 md:left-20 z-50">
+          <button
+            id="prev_hero_slide"
+            class="bg-transparent border group border-primary rotate-180 hover:bg-[var(--color-primary)] transition w-fit px-5 py-2.5 rounded-full"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              class=""
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="group-hover:fill-white transition"
+                d="M0 7H12.17L6.58 1.41L8 0L16 8L8 16L6.59 14.59L12.17 9H0V7Z"
+                fill="var(--color-primary)"
+              />
+            </svg>
+          </button>
+          <button
+            id="next_hero_slide"
+            class="bg-transparent border group border-primary hover:bg-[var(--color-primary)] transition w-fit px-5 py-2.5 rounded-full"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="group-hover:fill-white transition"
+                d="M0 7H12.17L6.58 1.41L8 0L16 8L8 16L6.59 14.59L12.17 9H0V7Z"
+                fill="var(--color-primary)"
+              />
+            </svg>
+          </button>
         </div>
       </div>
       <h2 class="text-center text-primary opacity-50 text-4xl mt-10 font-bold">
