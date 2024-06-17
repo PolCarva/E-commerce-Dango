@@ -19,7 +19,7 @@ Este proyecto es una aplicación web de comercio electrónico desarrollada con H
 
 1. Clona el repositorio:
    ```sh
-   git clone https://github.com/tuusuario/ecommerce-dango.git
+   git clone https://github.com/PolCarva/e-commerce-dango.git
    ```
 
 2. Navega al directorio del proyecto:
