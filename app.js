@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
   items.forEach((item) => {
     const slide = document.createElement("div");
     slide.className =
-      "swiper-slide !mt-5 md:!mt-8 p-3 shadow-[2px_2px_10px_rgba(0,0,0,0.4)] w-fit rounded-3xl flex flex-col items-center justify-center gap-2";
+      "swiper-slide !mt-5 md:!mt-8 p-3 shadow-[4px_4px_10px_rgba(0,0,0,0.4)] w-fit rounded-3xl flex flex-col items-center justify-center gap-2";
     slide.dataset.name = item.name;
     slide.dataset.price = item.price;
     slide.innerHTML = `
