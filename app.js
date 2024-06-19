@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const productSwiperEl = document.querySelector(".myProductSwiper");
   const productSwiper = new Swiper(productSwiperEl, {
     spaceBetween: 30,
-    slidesPerView: 1.9,
+    slidesPerView: 2,
     slidesPerGroup: 8,
     grid: {
       rows: 4,
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     breakpoints: {
       768: {
-        slidesPerView: 3.9,
+        slidesPerView: 3.85,
         slidesPerGroup: 8,
         grid: {
           rows: 2,
@@ -60,18 +60,18 @@ document.addEventListener("DOMContentLoaded", function () {
   items.forEach((item) => {
     const slide = document.createElement("div");
     slide.className =
-      "swiper-slide !mt-2 md:!mt-8 p-3 shadow-lg w-fit rounded-xl flex flex-col items-center justify-center gap-2";
+      "swiper-slide !mt-5 md:!mt-8 p-3 shadow-[2px_2px_10px_rgba(0,0,0,0.4)] w-fit rounded-3xl flex flex-col items-center justify-center gap-2";
     slide.dataset.name = item.name;
     slide.dataset.price = item.price;
     slide.innerHTML = `
             <img class="object-cover w-full aspect-[3/4]" src="${
               item.image
             }" alt="${item.name}">
-            <div class="w-full flex flex-col gap-2 lg:flex-row md:gap-0 pt-2 justify-between">
+            <div class="w-full flex flex-col items-center gap-2 lg:flex-row md:gap-0 pt-2 justify-between">
                 <span class="text-black text-lg">$${item.price.toFixed(
                   2
                 )}</span>
-              <button class="bg-primary transition text-white px-2 buy_now_button uppercase rounded-full hover:bg-[#8ece61] shadow-md active:shadow-inner active:translate-y-0.5">buy Now</button>
+              <button class="bg-primary w-fit transition text-white px-5 py-1 lg:py-1 lg:px-2 buy_now_button uppercase rounded-full hover:bg-[#8ece61] shadow-md active:shadow-inner active:translate-y-0.5">buy Now</button>
             </div>
         `;
     swiperWrapper.appendChild(slide);
