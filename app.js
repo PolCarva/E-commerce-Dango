@@ -18,12 +18,12 @@ const items = [
 
 document.addEventListener("DOMContentLoaded", function () {
   // Inicializar Swiper para Texto
-  var heroSwiper = new Swiper('.hero-swiper', {
-   /*  autoplay: true, */
+  var heroSwiper = new Swiper(".hero-swiper", {
+    autoplay: true,
     loop: true,
     navigation: {
-      nextEl: '#next_hero_slide',
-      prevEl: '#prev_hero_slide',
+      nextEl: "#next_hero_slide",
+      prevEl: "#prev_hero_slide",
     },
   });
 
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
     cartTotal.innerText = `$${total.toFixed(2)}`;
   }
-  
+
   // Función para guardar el carrito en localStorage
   function saveCart() {
     localStorage.setItem("cart", JSON.stringify(cart));
