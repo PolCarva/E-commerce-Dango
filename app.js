@@ -19,7 +19,7 @@ const items = [
 document.addEventListener("DOMContentLoaded", function () {
   // Inicializar Swiper para Texto
   var heroSwiper = new Swiper('.hero-swiper', {
-    autoplay: true,
+   /*  autoplay: true, */
     loop: true,
     navigation: {
       nextEl: '#next_hero_slide',
@@ -47,7 +47,15 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     breakpoints: {
       768: {
-        slidesPerView: 3.85,
+        slidesPerView: 4,
+        slidesPerGroup: 8,
+        grid: {
+          rows: 2,
+          fill: "row",
+        },
+      },
+      1024: {
+        slidesPerView: 3.9,
         slidesPerGroup: 8,
         grid: {
           rows: 2,
@@ -60,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
   items.forEach((item) => {
     const slide = document.createElement("div");
     slide.className =
-      "swiper-slide !mt-5 md:!mt-8 p-3 shadow-[4px_4px_10px_rgba(0,0,0,0.4)] w-fit rounded-3xl flex flex-col items-center justify-center gap-2";
+      "swiper-slide !mt-5 mr-5 md:!mt-8 p-3 shadow-[4px_4px_10px_rgba(0,0,0,0.4)] w-fit rounded-3xl flex flex-col items-center justify-center gap-2";
     slide.dataset.name = item.name;
     slide.dataset.price = item.price;
     slide.innerHTML = `
